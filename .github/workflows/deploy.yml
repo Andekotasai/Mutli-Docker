@@ -25,13 +25,13 @@ jobs:
 
       - name: build and push the images to password
         run: |
-          docker build -t multidocker_client ./client
-          docker build -t multidocker_nginx ./nginx
-          docker build -t multidocker_server ./server
-          docker build -t multidocker_worker ./worker
+          docker build -t kotasai9848/multidocker_client ./client
+          docker build -t kotasai9848/multidocker_nginx ./nginx
+          docker build -t kotasai9848/multidocker_server ./server
+          docker build -t kotasai9848/multidocker_worker ./worker
       - name: push the images to docker hub
         run: |
-          docker push multidocker_client
-          docker push multidocker_nginx  
-          docker push multidocker_server
-          docker push multidocker_worker
+          docker push kotasai9848/multidocker_client
+          docker push kotasai9848/multidocker_nginx   
+          docker push kotasai9848/multidocker_server
+          docker push kotasai9848/multidocker_worker
